@@ -3,7 +3,7 @@ from .models import Menu, Booking
 from .serializers import MenuSerializer, BookingSerializer
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.viewsets import ModelViewSet
-from rest_framework import permissions
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 def index(request):
@@ -22,4 +22,4 @@ class SingleMenuItemView(RetrieveUpdateDestroyAPIView):
 class BookingView(ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    permission_classes = [permissions.IsAuthenticated] 
+    permission_classes = [IsAuthenticated] 
