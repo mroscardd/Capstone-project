@@ -5,9 +5,9 @@ restaurant/
 
 #Api menú CRUD:
 
-menu/
+restaurant/menu/
 
-menu/id
+restaurant/menu/id
 
 
 #Create users and obtain token:
